@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.digitclassifier
+package org.github.poposca.digitclassifier
 
 import android.content.Context
 import android.content.res.AssetManager
@@ -27,11 +27,12 @@ class DigitClassifier(private val context: Context) {
   private var inputImageHeight: Int = 0 // will be inferred from TF Lite model
   private var modelInputSize: Int = 0 // will be inferred from TF Lite model
 
+  // Another Function called from MainActivity after drawing activity and setting eventes.
   fun initialize(): Task<Void> {
     val task = TaskCompletionSource<Void>()
     executorService.execute {
       try {
-        initializeInterpreter()
+        initializeInterpreter() // --> OJO
         task.setResult(null)
       } catch (e: IOException) {
         task.setException(e)
@@ -90,13 +91,14 @@ class DigitClassifier(private val context: Context) {
 
     startTime = System.nanoTime()
     val result = Array(1) { FloatArray(OUTPUT_CLASSES_COUNT) }
-    interpreter?.run(byteBuffer, result)
+    interpreter?.run(byteBuffer, result)   //--> The actual prediction thrown into result variable
     elapsedTime = (System.nanoTime() - startTime) / 1000000
     Log.d(TAG, "Inference time = " + elapsedTime + "ms")
 
-    return getOutputString(result[0])
+    return getOutputString(result[0]) // Result variable transformed into a formated String
   }
 
+  // Method called from MainActivity when finger released from screen.
   fun classifyAsync(bitmap: Bitmap): Task<String> {
     val task = TaskCompletionSource<String>()
     executorService.execute {

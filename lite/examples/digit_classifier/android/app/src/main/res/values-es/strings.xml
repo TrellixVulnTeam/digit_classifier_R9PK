@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tfe_dc_clear_button_text">Limpiar</string>
+    <string name="tfe_dc_prediction_text_placeholder" translatable="false">Por favor, dibuje un dígito</string>
+    <string name="tfe_dc_classification_error_message" translatable="false">Erro clasificando su dibujo: %s</string>
+</resources>

@@ -3,4 +3,8 @@
   <color name="tfe_color_primary">#ffa800</color>
   <color name="tfe_color_primary_dark">#ff6f00</color>
   <color name="tfe_color_accent">#425066</color>
+
+  <color name="yachay_main_blue">#7C9FA7</color>
+  <color name="yachay_dark_gray">#616F72</color>
+  <color name="yachay_light_gray">#8DA0A7</color>
 </resources>

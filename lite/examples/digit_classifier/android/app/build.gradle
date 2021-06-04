@@ -6,7 +6,7 @@ apply plugin: 'de.undercouch.download'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "org.tensorflow.lite.examples.digitclassifier"
+        applicationId "org.github.poposca.digitclassifier"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

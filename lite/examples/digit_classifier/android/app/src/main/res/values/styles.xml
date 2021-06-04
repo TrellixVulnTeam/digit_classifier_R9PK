@@ -8,4 +8,10 @@
     <item name="colorAccent">@color/tfe_color_accent</item>
   </style>
 
+  <style name="AppTheme.YachayDigitClassifier" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/yachay_light_gray</item>
+    <item name="colorPrimaryDark">@color/yachay_dark_gray</item>
+    <item name="colorAccent">@color/yachay_main_blue</item>
+  </style>
+
 </resources>

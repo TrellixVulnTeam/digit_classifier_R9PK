@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.digitclassifier
+package org.github.poposca.digitclassifier
 
 import android.annotation.SuppressLint
 import android.graphics.Color
@@ -22,11 +22,13 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.tfe_dc_activity_main)
 
-    // Setup view instances
+    // Setup Draw view
     drawView = findViewById(R.id.draw_view)
     drawView?.setStrokeWidth(70.0f)
     drawView?.setColor(Color.WHITE)
     drawView?.setBackgroundColor(Color.BLACK)
+
+    //Setup clear Button view
     clearButton = findViewById(R.id.clear_button)
     predictedTextView = findViewById(R.id.predicted_text)
 
